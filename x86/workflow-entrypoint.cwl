@@ -12,14 +12,6 @@ inputs:
         type: boolean
     results:
         type: string?
-    db_host:
-        type: string
-    db_name:
-        type: string
-    db_user:
-        type: string
-    db_password:
-        type: string
 
 outputs:
     output_file:
@@ -34,9 +26,5 @@ steps:
             result_modifiers: result_modifiers
             is_availability: is_availability
             results: results
-            db_host: db_host
-            db_name: db_name
-            db_user: db_user
-            db_password: db_password
             
         out: [output_file]
