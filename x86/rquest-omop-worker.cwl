@@ -6,13 +6,6 @@ label: rquest-omop-worker
 hints:
     DockerRequirement:
         dockerPull: hutchstack/rquest-omop-worker:next
-requirements:
-    EnvVarRequirement:
-        envDef:
-            DATASOURCE_DB_HOST: $(inputs.db_host)
-            DATASOURCE_DB_DATABASE: $(inputs.db_name)
-            DATASOURCE_DB_USERNAME: $(inputs.db_user)
-            DATASOURCE_DB_PASSWORD: $(inputs.db_password)
 
 baseCommand: [rquest-omop-worker]
 inputs:
@@ -36,14 +29,6 @@ inputs:
         inputBinding:
             position: 4
             prefix: -o
-    db_host:
-      type: string
-    db_name:
-      type: string
-    db_user:
-      type: string
-    db_password:
-      type: string
 
 outputs:
     output_file:
